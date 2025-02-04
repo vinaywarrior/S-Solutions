@@ -1,0 +1,84 @@
+/* Curved Footer Styles */
+.footer {
+    background: linear-gradient(to right, #6a3093, #a044ff);
+    color: #fff;
+    padding: 40px;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    clip-path: ellipse(80% 100% at 50% 100%); /* Creates a curve at the center */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #9bb0eb;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+  }
+  
+  .social-icon {
+    display: block; /* Make each icon a block to stack them */
+    margin-bottom: 10px; /* Space between icons */
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .social-icon:hover {
+    color: #9bb0eb;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #bbb;
+    font-size: 12px;
+  }
+  

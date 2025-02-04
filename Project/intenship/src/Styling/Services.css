@@ -1,0 +1,86 @@
+.courses-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.course-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: 20px;
+  background-color: #fff;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.left-section, 
+.right-section {
+  flex: 1;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+   /* Updated border-radius */
+  max-height: 700px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border: 3px solid transparent; /* Initially transparent border */
+  border-image: linear-gradient(45deg, #ff007f, #00c6ff); /* Gradient border */
+  border-image-slice: 1;
+  animation: gradientBorderAnimation 3s infinite linear, fadeIn 1.5s ease-in-out; /* Combined animation */
+}
+
+.service-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+p {
+  letter-spacing: 2px;
+  word-spacing: 0.2em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient border animation */
+@keyframes gradientBorderAnimation {
+  0% {
+    border-image: linear-gradient(45deg, #ff007f, #00c6ff); /* Initial gradient */
+    border-image-slice: 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, #00c6ff, #ff007f); /* Swapped gradient for animation effect */
+    border-image-slice: 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, #ff007f, #00c6ff); /* Reset to initial gradient */
+    border-image-slice: 1;
+  }
+}

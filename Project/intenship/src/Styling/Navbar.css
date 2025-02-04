@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+div {
+    font-family: "Oswald", sans-serif;
+}
+
+.navbar {
+    background-color: #FFF;
+    width: 100%;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    object-fit: fill;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: transform 0.3s ease; /* Smooth transition for visibility */
+}
+
+.navbar.hidden {
+    transform: translateY(-100%); /* Move the navbar out of view */
+}
+
+.navbar.visible {
+    transform: translateY(0); /* Reset position */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-container img {
+    width: 80px;
+    height: 70px;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.logo-img {
+    object-fit: cover;
+}
+
+.text-content {
+    margin-left: 20px;
+}
+
+.text-content h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin: 0;
+    line-height: 30px;
+    font-weight: 900;
+    overflow: hidden; /* Hide overflowing text during animation */
+    display: inline-block; /* Ensure animation applies to inline content */
+    white-space: nowrap; /* Prevent wrapping */
+    color: transparent; /* Start with transparent text */
+    animation: slideInLeft 5s ease forwards; /* Add animation */
+}
+
+/* Keyframes for the slide-in effect from left to right with black color */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Fully transparent */
+        color: transparent; /* Transparent text */
+    }
+    50% {
+        color: gray; /* Intermediate gray color */
+    }
+    100% {
+        transform: translateX(0); /* Normal position */
+        opacity: 1; /* Fully visible */
+        color: black; /* Final black color */
+    }
+}
+
+.text-content p {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.menu a {
+    font-size: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #9bb0eb;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #9bb0eb;
+    background-color: rgba(111, 91, 225, 0.2);
+    border-radius: 5px;
+}
+
+/* Apply top margin to the body or main content */
+body {
+    margin-top: 70px; /* Adjust based on the navbar height */
+}

@@ -1,0 +1,14 @@
+p {
+    letter-spacing: 1px;
+    word-spacing: 0.2em;
+    text-align: justify;
+}
+
+.course-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    margin-top: 0px !important;
+    background-color: #fff;
+}

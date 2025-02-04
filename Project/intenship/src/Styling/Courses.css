@@ -1,0 +1,191 @@
+.courses-section {
+  padding: 40px 10px;
+  background-color: #ffffff;
+}
+
+.courses-container {
+  position: relative;
+  padding: 15px;
+  text-align: center;
+}
+
+.courses-section h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.courses-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.courses-slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 90%; /* Reduced max width */
+  margin: 0 auto;
+}
+
+.courses-slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.courses-service-card {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 250px; 
+  background: linear-gradient(135deg, hsla(45, 4%, 56%, 0.235), #f4f0f0c3);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, border 1s ease-in-out; /* Smooth border transition */
+  border: 2px solid #ffffff; /* Initial border color */
+  animation: borderAnimation 4s infinite linear; /* Border animation */
+  height:450px;
+}
+
+.courses-service-card:hover {
+  transform: scale(1.05);
+}
+
+.courses-service-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  height:200px;
+}
+
+.courses-button {
+  background-color: #0fad41;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px; /* Reduced padding */
+  font-size: 0.9rem; /* Reduced font size */
+  cursor: pointer;
+  margin: 5px;
+}
+
+.courses-button:hover {
+  background-color: #078324;
+}
+
+.courses-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  padding: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  width: 45px; /* Increased size for better visibility */
+  height: 45px;
+  z-index: 2;
+}
+
+.courses-nav-button:hover {
+  background-color: #d719a8; /* Blue highlight on hover */
+  transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.courses-nav-button.prev {
+  left: 10px; /* Adjust position for left arrow */
+}
+
+.courses-nav-button.next {
+  right: 10px; /* Adjust position for right arrow */
+}
+
+@media (max-width: 768px) {
+  .courses-service-card {
+    max-width: 100%;
+  }
+
+  .courses-nav-button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .courses-section p {
+    font-size: 0.9rem;
+  }
+}
+
+.courses-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.courses-button {
+  background: linear-gradient(135deg, #ffffff, #000000);
+  background-size: 200% 200%; /* Expand gradient for smooth animation */
+  color: #ffffff; /* Initial text color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 5px;
+  animation: bgAnimation 4s infinite linear; /* Animation for background */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.courses-button:hover {
+  background: linear-gradient(135deg, #000000, #ffffff); /* Reverse gradient on hover */
+  animation: bgHoverAnimation 2s infinite linear; /* Faster animation on hover */
+  color: #000000; /* Change text color on hover */
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Faster hover animation for background gradient */
+@keyframes bgHoverAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Border animation */
+@keyframes borderAnimation {
+  0% {
+    border-color: #ffffff;
+  }
+  50% {
+    border-color: #000000;
+  }
+  100% {
+    border-color: #ffffff;
+  }
+}
